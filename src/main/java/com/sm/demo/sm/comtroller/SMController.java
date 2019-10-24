@@ -25,7 +25,13 @@ public class SMController {
 	
 	@PostMapping("/SMInsert")
 	public SM inSertSM(@RequestBody SM sm){
-		return service.insertSM(sm);
+		SM smModel = null;
+		try {
+			smModel = service.insertSM(sm);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return smModel; 
 	}
 	
 	@PostMapping("/SMDelete")
