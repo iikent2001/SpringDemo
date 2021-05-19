@@ -41,6 +41,6 @@ public class SMController {
 	
 	@PostMapping("/searchSMId")
 	public SM searchSMId(@RequestBody SM sm){
-		return service.findByid(id).get();
+		return service.findByid(sm.getSeq()).get();
 	}
 }
