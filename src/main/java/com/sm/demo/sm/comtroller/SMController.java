@@ -40,7 +40,7 @@ public class SMController {
 	}
 	
 	@PostMapping("/searchSMId")
-	public SM searchSMId(@RequestBody Long id){
+	public SM searchSMId(@RequestBody SM sm){
 		return service.findByid(id).get();
 	}
 }
